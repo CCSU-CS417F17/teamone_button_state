@@ -1,49 +1,48 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * 
+ * This class is provided as an example of a concrete 
+ * implementation of ButtonState
+ * 
  */
 package cs505.group1.state;
 
 /**
+ *
  * @author CS505 Fall17 Group1
  * 
  * TO CHANGE THE STATE:
- * The line "StateA newState = new StateA();"
+ * The line "ButtonStateA newState = new ButtonStateA();"
  * in each method can be changed to a different state such as
- * "StateB newState = new StateB();"
+ * "ButtonStateA newState = new ButtonStateB();"
  * This allows the method to return a different state.
  */
+public class StateB implements ButtonState{
 
-/*
-public class StateB implements State{
-
-public StateB() {
+    public StateB() {
+    }
+    
+    public ButtonState singlePress(){
+        System.out.println("StateB, singlePress detected.");
+        ButtonState newState = new StateB();  //See comments for usage
+        return (ButtonState) newState;
+    };
+    
+    public ButtonState doublePress(){
+        System.out.println("StateB, doublePress detected.");
+        ButtonState newState = new StateC();  //See comments for usage
+        return  newState;
+    };
+    
+    public ButtonState longPress(){
+        System.out.println("StateB, longPress detected.");
+        ButtonState newState = new StateB();  //See comments for usage
+        return (ButtonState) newState;
+    };
+    
+    @Override
+    public String toString(){
+      return "StateB";
+    };
+    
+    
 }
-
-public State singlePress(){
-System.out.println("StateB, singlePress detected. Going to StateC.");
-State newState = new StateC();  //See comments for usage
-return (State) newState;
-};
-
-public State doublePress(){
-System.out.println("StateB, doublePress detected.");
-State newState = new StateB();  //See comments for usage
-return (State) newState;
-};
-
-public State longPress(){
-System.out.println("StateB, longPress detected.");
-State newState = new StateB();  //See comments for usage
-return (State) newState;
-};
-
-@Override
-public String toString(){
-return "BBB StateB BBB";
-};
-
-
-}
-*/

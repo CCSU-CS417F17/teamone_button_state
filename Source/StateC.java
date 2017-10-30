@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * 
+ * This class is provided as an example of a concrete 
+ * implementatin of ButtonState
+ * 
  */
 package cs505.group1.state;
 
@@ -14,38 +15,32 @@ package cs505.group1.state;
  * in each method can be changed to a different state such as
  * "ButtonStateA newState = new ButtonStateB();"
  * This allows the method to return a different state.
- * 
- * 
  */
+public class StateC implements ButtonState{
 
-/*
-public class StateC implements State{
-
-public StateC() {
+    public StateC() {
+    }
+    
+    public ButtonState singlePress(){
+        System.out.println("StateC, singlePress detected.");
+        ButtonState newState = new StateC();  //See comments for usage
+        return (ButtonState) newState;
+    };
+    
+    public ButtonState doublePress(){
+        System.out.println("StateC, doublePress detected.");
+        ButtonState newState = new StateC();  //See comments for usage
+        return  newState;
+    };
+    
+    public ButtonState longPress(){
+        System.out.println("StateC, longPress detected.");
+        ButtonState newState = new StateA();  //See comments for usage
+        return (ButtonState) newState;
+    };
+    
+    @Override
+    public String toString(){
+      return "StateC";
+    };
 }
-
-public State singlePress(){
-System.out.println("StateC, singlePress detected.");
-State newState = new StateC();  //See comments for usage
-return (State) newState;
-};
-
-public State doublePress(){
-System.out.println("StateC, doublePress detected.");
-State newState = new StateC();  //See comments for usage
-return (State) newState;
-};
-
-public State longPress(){
-System.out.println("StateC, longPress detected. Going to StateA.");
-State newState = new StateA();  //See comments for usage
-return (State) newState;
-};
-
-@Override
-public String toString(){
-return "CCC StateC CCC";
-};
-
-
-}*/

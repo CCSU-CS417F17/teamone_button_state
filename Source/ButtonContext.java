@@ -7,12 +7,18 @@ package cs505.group1.state;
 
 /**
  * @author CS505 Fall17 Group1
+ * @version 2017.10.29
  */
-abstract class ButtonStateContext {
+abstract class ButtonContext {
     
     private ButtonState buttonState;
     
-    public ButtonStateContext(){
+    /**
+     * Constructor.  In concrete extensions buttonState  
+     * must be assigned an initial value such as
+     * this.buttonState =  new StateA();
+     */
+    public ButtonContext(){
         this.buttonState = null;
     }
     
@@ -20,19 +26,19 @@ abstract class ButtonStateContext {
      * Implements code for a single button press.
      * @return State allows a state change 
      */
-    protected abstract ButtonState singlePress();
+    public abstract ButtonState singlePress();
     
     /**
      * Implements code for a double button press.
      * @return State allows a state change 
      */
-    protected abstract ButtonState doublePress();
+    public abstract ButtonState doublePress();
     
     /**
      * Implements code for a long button press.
      * @return State allows a state change 
      */
-    protected abstract ButtonState longPress();
+    public abstract ButtonState longPress();
     
     /**
      * Sets the state to be equal to the passed State.

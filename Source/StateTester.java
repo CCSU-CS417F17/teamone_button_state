@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
  */
 package cs505.group1.state;
 
@@ -13,21 +11,21 @@ import java.util.Scanner;
  */
 public class StateTester {
 
-    /**
-     * @param args the command line arguments
-   * @throws java.io.IOException
-     */
+/**
+* @param args the command line arguments
+* @throws java.io.IOException
+*/
   
-  /*
+  
   public static void main(String[] args) throws IOException {
   Scanner scan = new Scanner(System.in);
-  State stateA  = (State) new StateA();
-  State stateB  = (State) new StateB();
-  State stateC  = (State) new StateC();
+  ButtonState stateA  = (ButtonState) new StateA();
+  ButtonState stateB  = (ButtonState) new StateB();
+  ButtonState stateC  = (ButtonState) new StateC();
   
   char input;
-  ButtonStateContext state = new ButtonAStateContext();
-  state.setState(stateA);
+  
+  ButtonAContext buttonState = new ButtonAContext();
   
   System.out.println("State Tester.");
   System.out.println("1 : single press. \ta : setStateA");
@@ -36,17 +34,17 @@ public class StateTester {
   System.out.println("e: exit");
   
   do {
-  System.out.println("\nCurrent State:  " + state.toString() );
+  System.out.println("\nCurrent buttonState:  " + buttonState.toString() );
   System.out.print("Enter next input: ");
   input = scan.nextLine().charAt(0);
   
   switch (input) {
-  case '1' : state.setState( state.singlePress()); break;
-  case '2' : state.setState( state.doublePress()); break;
-  case '3' : state.setState( state.longPress()  ); break;
-  case 'a' : state.setState(stateA); break;
-  case 'b' : state.setState(stateB); break;
-  case 'c' : state.setState(stateC); break;
+  case '1' : buttonState.setState( buttonState.singlePress()); break;
+  case '2' : buttonState.setState( buttonState.doublePress()); break;
+  case '3' : buttonState.setState( buttonState.longPress()  ); break;
+  case 'a' : buttonState.setState(stateA); break;
+  case 'b' : buttonState.setState(stateB); break;
+  case 'c' : buttonState.setState(stateC); break;
   case 'e' : break;  // caught in the loop condition, just here to avoid the default.
   default  : System.out.println("Error, switch default reached.");
   }
@@ -57,5 +55,5 @@ public class StateTester {
   
   
   }
-  */
+  
 }

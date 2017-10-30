@@ -8,17 +8,19 @@ package cs505.group1.state;
 /**
  * @author CS505 Fall17 Group1
  */
-public class ButtonAStateContext extends ButtonStateContext{
+public class ButtonAContext extends ButtonContext{
     // buttonState is the current state 
     private ButtonState buttonState;
         
     // Constructor
-    public ButtonAStateContext(){
-        this.buttonState = null;
-    }
+    public ButtonAContext(){
+        this.buttonState =  new StateA();
+     }
     
     public ButtonState singlePress(){
+      System.out.println("in ButtonAContext.singlePress");
       buttonState = buttonState.singlePress();
+      
       return buttonState;
     };
     
@@ -31,10 +33,5 @@ public class ButtonAStateContext extends ButtonStateContext{
       buttonState = buttonState.longPress();
       return buttonState;
     };
-    
-    @Override
-    public String toString(){
-      return buttonState.toString();
-    }
-    
+        
 }

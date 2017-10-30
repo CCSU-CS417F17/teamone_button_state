@@ -1,7 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This class is provided as an example of a concrete 
+ * implementation of ButtonState
  */
 package cs505.group1.state;
 
@@ -22,12 +21,12 @@ public class StateA implements ButtonState{
     
     public ButtonState singlePress(){
         System.out.println("StateA, singlePress detected.");
-        ButtonState newState = new StateA();  //See comments for usage
+        ButtonState newState = new StateB();  //See comments for usage
         return (ButtonState) newState;
     };
     
     public ButtonState doublePress(){
-        System.out.println("StateA, doublePress detected. Going to State B.");
+        System.out.println("StateA, doublePress detected.");
         ButtonState newState = new StateA();  //See comments for usage
         return  newState;
     };
@@ -42,6 +41,4 @@ public class StateA implements ButtonState{
     public String toString(){
       return "StateA";
     };
-    
-    
 }
