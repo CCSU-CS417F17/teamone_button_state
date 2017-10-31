@@ -29,7 +29,7 @@ public class StateB implements ButtonState{
     
     public ButtonState doublePress(){
         System.out.println("StateB, doublePress detected.");
-        ButtonState newState = new StateC();  //See comments for usage
+        ButtonState newState = new StateB();  //See comments for usage
         return  newState;
     };
     

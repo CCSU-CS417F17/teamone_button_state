@@ -1,7 +1,7 @@
 /**
  * 
  * This class is provided as an example of a concrete 
- * implementatin of ButtonState
+ * implementation of ButtonState
  * 
  */
 package cs505.group1.state;
@@ -35,7 +35,7 @@ public class StateC implements ButtonState{
     
     public ButtonState longPress(){
         System.out.println("StateC, longPress detected.");
-        ButtonState newState = new StateA();  //See comments for usage
+        ButtonState newState = new StateC();  //See comments for usage
         return (ButtonState) newState;
     };
     

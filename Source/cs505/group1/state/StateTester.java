@@ -25,7 +25,7 @@ public class StateTester {
   
   char input;
   
-  ButtonAContext buttonState = new ButtonAContext();
+  ButtonAContext buttonState = new ButtonAContext(stateA);
   
   System.out.println("State Tester.");
   System.out.println("1 : single press. \ta : setStateA");
@@ -34,26 +34,21 @@ public class StateTester {
   System.out.println("e: exit");
   
   do {
-  System.out.println("\nCurrent buttonState:  " + buttonState.toString() );
-  System.out.print("Enter next input: ");
-  input = scan.nextLine().charAt(0);
-  
-  switch (input) {
-  case '1' : buttonState.setState( buttonState.singlePress()); break;
-  case '2' : buttonState.setState( buttonState.doublePress()); break;
-  case '3' : buttonState.setState( buttonState.longPress()  ); break;
-  case 'a' : buttonState.setState(stateA); break;
-  case 'b' : buttonState.setState(stateB); break;
-  case 'c' : buttonState.setState(stateC); break;
-  case 'e' : break;  // caught in the loop condition, just here to avoid the default.
-  default  : System.out.println("Error, switch default reached.");
-  }
-  
+    System.out.println("\nCurrent buttonState:  " + buttonState.toString() );
+    System.out.print("Enter next input: ");
+    input = scan.nextLine().charAt(0);
+    switch (input) {
+        case '1' : buttonState.singlePress();     break;
+        case '2' : buttonState.doublePress();     break;
+        case '3' : buttonState.longPress();       break;
+        case 'a' : buttonState.setState(stateA);  break;
+        case 'b' : buttonState.setState(stateB);  break;
+        case 'c' : buttonState.setState(stateC);  break;
+        case 'e' : break;  //do nothing for 'e',  loop condition checks for 'e'
+        default  : System.out.println("Error, switch default reached.");
+    }
   } while (input != 'e');
   System.out.println("testing complete.");
-  
-  
-  
   }
   
 }

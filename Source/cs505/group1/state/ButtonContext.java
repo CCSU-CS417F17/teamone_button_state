@@ -1,7 +1,4 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
  */
 package cs505.group1.state;
 
@@ -18,58 +15,45 @@ abstract class ButtonContext {
      * must be assigned an initial value such as
      * this.buttonState =  new StateA();
      */
-    public ButtonContext(){
-        this.buttonState = null;
+    protected ButtonContext(ButtonState buttonState){
+        this.buttonState = buttonState;
     }
     
     /**
      * Implements code for a single button press.
      * @return State allows a state change 
      */
-    public abstract ButtonState singlePress();
+    public abstract void singlePress();
     
     /**
      * Implements code for a double button press.
      * @return State allows a state change 
      */
-    public abstract ButtonState doublePress();
+    public abstract void doublePress();
     
     /**
      * Implements code for a long button press.
      * @return State allows a state change 
      */
-    public abstract ButtonState longPress();
+    public abstract void longPress();
     
     /**
      * Sets the state to be equal to the passed State.
      * @param newState 
      */
-    public void setState(ButtonState  newState){
-      this.buttonState = newState;
-    };
+    public abstract void setState(ButtonState  newState);
     
     /**
      * Gets the current state.
      * @return State
      */
-    public ButtonState getState(){
-      return this.buttonState;
-    };
+    public abstract ButtonState getState();
     
     /**
      * Invokes the toString method of the concrete class for the
      * current state.  
-     * @return toString or empty string if state is null.
+     * @return A string description of the context or a null string.
      */
-    public String toString()
-    {
-      if(this.buttonState == null)
-        return "";
-      else
-      {
-        return this.buttonState.toString();
-      }
-      
-    };
+    public abstract String toString();
     
 }
