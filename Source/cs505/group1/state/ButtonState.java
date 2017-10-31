@@ -10,27 +10,27 @@ package cs505.group1.state;
 public interface ButtonState {
   
    /**
-   * Implement what happens on the single press when in this state
-   * @return a ButtonState
+   * Calls singlePress method of the concrete subclass.
+   * @return a ButtonState object set by the concrete subclass.
    */  
   public ButtonState singlePress();
     
   /**
-   * Implement what happens on the double press when in this state
-   * @return a ButtonState
+   * Calls doublePress method of the concrete subclass.
+   * @return a ButtonState object set by the concrete subclass.
    */  
   public ButtonState doublePress();
     
   /**
-   * Implement what happens on the long press when in this state
-   * @return a ButtonState
+   * Calls longPress method of the concrete subclass.
+   * @return a ButtonState object set by the concrete subclass.
    */  
   public ButtonState longPress();
    
   
   /**
-   * Implement what occurs on the toString method.
-   * @return a string representing the current state.
+   * Calls toString method of the concrete subclass.
+   * @return a string set by the concrete subclass.
    */  
   @Override
   public String toString();
