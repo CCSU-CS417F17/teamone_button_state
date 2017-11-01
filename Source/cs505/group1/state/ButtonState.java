@@ -4,7 +4,20 @@
 package cs505.group1.state;
 
 /**
- * @author CS505 Fall17 Group1
+ * A set of methods for GrovePi button interactions which depend on machine state. 
+ *    
+ * Button actions include singlePress, doublePress, and longPress.  Additional actions
+ * can be defined for specific requirements.<br>
+ * <br>
+ * Button press methods can return a different state by setting the returned object
+ * to any implemented concrete state cast to ButtonState.
+ * 
+ * @author CS505 Fall17 Group1: <br>
+ * Emily Park<br>
+ * Jeffrey Blankenship  <br>
+ * Cecelia Oluwadoyinsola<br>
+ * James Luczynski<br>
+ * Melissa Mulcahy <br>
  * @version 2017.10.29
  */
 public interface ButtonState {
