@@ -1,22 +1,28 @@
-/*
- * 
- */
+
 package cs505.group1.state;
 
 import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * @author CS505 Fall17 Group1
+ * Example of a Finite State Machine using the provided concrete subclass examples.
+ * 
+ * @author CS505 Fall17 Group1: <br>
+ * Emily Park<br>
+ * Jeffrey Blankenship  <br>
+ * Cecelia Oluwadoyinsola<br>
+ * James Luczynski<br>
+ * Melissa Mulcahy <br>
+ * @version 2017.10.29
+ * 
+ * To change the state by button operations:
+ * The line "ButtonStateA newState = new ButtonStateA();"
+ * in each method can be changed to a different state such as
+ * "ButtonStateA newState = new ButtonStateB();"
+ * This allows the method to return a different state.
  */
 public class StateTester {
 
-/**
-* @param args the command line arguments
-* @throws java.io.IOException
-*/
-  
-  
   public static void main(String[] args) throws IOException {
   Scanner scan = new Scanner(System.in);
   ButtonState stateA  = (ButtonState) new StateA();
