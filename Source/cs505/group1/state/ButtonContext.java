@@ -32,7 +32,7 @@ public class ButtonContext {
      * current state.  
      */
     public void singlePress(){
-      this.buttonState.singlePress();
+      buttonState = buttonState.singlePress();
     };
     
     /**
