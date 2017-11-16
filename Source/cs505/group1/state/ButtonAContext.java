@@ -1,48 +1,25 @@
 package cs505.group1.state;
 
 /**
- * An example concrete subclass of ButtonContext.  
+ * An example extension of ButtonContext.  
+ * 
+ * Extensions of ButtonContext require only their own constructor.  
+ * All methods of ButtonContext pass method calls to ButtonState and its
+ * subclasses, but may be overridden if non-generic behavior is required.
  * 
  * @author CS505 Fall17 Group1: <br>
- * Emily Park<br>
- * Jeffrey Blankenship  <br>
- * Cecelia Oluwadoyinsola<br>
- * James Luczynski<br>
- * Melissa Mulcahy <br>
- * @version 2017.10.29
+ * Emily Park, Jeffrey Blankenship, Cecelia Oluwadoyinsola, James Luczynski, Melissa Mulcahy <br>
+ * @version 2017.11.15
  */
 public class ButtonAContext extends ButtonContext{
-    // buttonState is the current state 
-    private ButtonState buttonState;
         
-    // Constructor
+    /**
+     * Constructs a new ButtonAContext object and initializes it with the specified ButtonState
+     * @param buttonState The initial ButtonState
+     */
     public ButtonAContext(ButtonState buttonState){
         super(buttonState);  //calls the parent class constructor
         this.buttonState = buttonState; 
     }
-    
-    public void singlePress(){
-      buttonState = buttonState.singlePress();
-    };
-    
-    public void doublePress(){
-      buttonState = buttonState.doublePress();
-    };
-    
-    public void longPress(){
-      buttonState = buttonState.longPress();
-    };
-    
-    public void setState(ButtonState  buttonState){
-      this.buttonState = buttonState;
-    };
-    
-    public ButtonState getState(){
-      return this.buttonState;
-    };
-    
-    public String toString(){
-        return this.buttonState.toString();
-    };
-        
+       
 }

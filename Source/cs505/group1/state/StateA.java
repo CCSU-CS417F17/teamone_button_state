@@ -3,15 +3,7 @@ package cs505.group1.state;
 /**
  * Example of a concrete subclass of ButtonState
  * 
- * @author CS505 Fall17 Group1: <br>
- * Emily Park<br>
- * Jeffrey Blankenship  <br>
- * Cecelia Oluwadoyinsola<br>
- * James Luczynski<br>
- * Melissa Mulcahy <br>
- * 
- * @version 2017.10.29
- * 
+ * @author CS505 Fall17 Group1
  * 
  */
 public class StateA implements ButtonState{
@@ -30,6 +22,7 @@ public class StateA implements ButtonState{
      * 
      * @return ButtonState object 
      */
+    @Override
     public ButtonState singlePress(){
         System.out.println("StateA, singlePress detected.");
         ButtonState newState = new StateA();  
