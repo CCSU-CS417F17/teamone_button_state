@@ -13,12 +13,8 @@ package cs505.group1.state;
  * to any implemented concrete state cast to ButtonState.
  * 
  * @author CS505 Fall17 Group1: <br>
- * Emily Park<br>
- * Jeffrey Blankenship  <br>
- * Cecelia Oluwadoyinsola<br>
- * James Luczynski<br>
- * Melissa Mulcahy <br>
- * @version 2017.10.29
+ * Emily Park, Jeffrey Blankenship, Cecelia Oluwadoyinsola, James Luczynski, Melissa Mulcahy <br>
+ * @version 2017.11.15
  */
 public interface ButtonState {
   
