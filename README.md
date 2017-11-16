@@ -18,3 +18,12 @@ Update notes will be included in this ReadMe file for easy reference.
 - Changed ButtonContext.buttonState visibility to protected and removed redundant class variable ButtonAContext.buttonState.
 - Provided default functionality in ButtonContext methods and removed abstract designation.
 - Updated javadoc and readme to reflect these changes.
+
+
+**10/31/17 Update**
+- Created source folder structure to reflect package structure.
+- Added Javadoc for all classes.
+- ButtonContext constructor changed to protected and to require an initial state.
+- ButtonContext methods changed to void, state changes are kept within ButtonContext.
+- Clarified instructions for state changes via button methods. Moved this guidance to the more generic ButtonState class description.
+- Updated Javadoc to include formatting per [Oracle styleguide](http://www.oracle.com/technetwork/articles/java/index-137868.html)
